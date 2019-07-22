@@ -160,13 +160,13 @@
                 this.resizeTimer = setTimeout(() => this.lerpFactor = 0.04, 250);
             });
 
-            this.DOM.items.forEach((item,pos) => {
+            this.DOM.items.forEach((item, pos) => {
                 // The item's title
                 const title = item.dataset.title;
 
                 // Show the title next to the cursor
                 item.addEventListener('mouseenter', () => cursor.setTitle(title));
-                item.addEventListener('click', ()=> {
+                item.addEventListener('click', () => {
                     // Position of the clicked item
                     this.pos = pos;
                     this.title = title;
@@ -175,7 +175,7 @@
                     this.showContent();
 
                     // Force to show the title next to the cursor (it might not update because of the grid animation - the item under the mouse can be a different one than the one the user moved the mouse to)
-                    cursor.setTimeout(title);
+                    cursor.setTitle(title);
                 });
             });
 
@@ -191,8 +191,8 @@
             }
             this.isAnimating = true;
 
-            // Set the content background and title
-            this.DOM.content.style.backgroundImage = this.DOM.items[this.pos].querySelector('.grid_item-inner').style.backgroundImage.replace(/imgs/g, 'imgs/large');
+            // Set the content background image and title
+            this.DOM.content.style.backgroundImage = this.DOM.items[this.pos].querySelector('.grid_item-inner').style.backgroundImage.replace(/img/g, 'imgs/large');
             this.DOM.contentTitle.innerHTML = this.title;
 
             // Scales down and fades out the mouse toggle
