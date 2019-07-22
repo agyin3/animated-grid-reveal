@@ -230,7 +230,7 @@ a:focus {
 }
 
 .grid_item-inner:hover::after {
-    background: rgba(o,0,0,0.77);
+    background: rgba(0,0,0,0.77);
 }
 
 @media screen and (min-width: 53em) {
