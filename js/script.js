@@ -110,6 +110,9 @@
             this.DOM = {el:el};
 
             // The grid element
+            this.DOM.grid = this.DOM.el.querySelector('.grid');
+
+            // The grid items
             this.DOM.items = [...this.DOM.grid.children];
 
             // Total number of grid items
