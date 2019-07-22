@@ -137,10 +137,10 @@
         }
         calculateSize() {
             // The height of the grid wrap 
-            this.height = this.DOM.el.offSetHeight;
+            this.height = this.DOM.el.offsetHeight;
 
             // The difference between the height of the grid wrap and the height of the grid. this is the amount we can translate the grid
-            this.extraHeight = this.DOM.grid.offSetHeight - this.height;
+            this.extraHeight = this.DOM.grid.offsetHeight - this.height;
 
             // Number of grid columns. The CSS variable --cell-number gives us the number of rows
             this.columns = this.itemsTotal/getComputedStyle(this.DOM.grid).getPropertyValue('--cell-number');
