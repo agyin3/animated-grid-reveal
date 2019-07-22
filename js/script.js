@@ -77,10 +77,10 @@
 
             // Also the scale and opacity values for the toggle
             this.lastScale = MathUtilis.lerp(this.lastScale, 1, 0.15);
-            this.lastopacity = MathUtilis.lerp(this.lastOpacity, 1, 0.1);
+            this.lastOpacity = MathUtilis.lerp(this.lastOpacity, 1, 0.1);
 
             // Apply the styles
-            this.DOM.toggle.style.transform = `translateX(${(this.lastMousePos.toggle.x)}px) translateY(${this.lastMousePos.toggle.y}px) scale(${(this.scale)})`;
+            this.DOM.toggle.style.transform = `translateX(${(this.lastMousePos.toggle.x)}px) translateY(${this.lastMousePos.toggle.y}px) scale(${this.lastScale})`;
             this.DOM.toggle.style.opacity = this.lastOpacity;
             this.DOM.title.style.transform = `translateX(${(this.lastMousePos.title.x)}px) translateY(${this.lastMousePos.title.y}px)`;
 
