@@ -192,7 +192,7 @@
             this.isAnimating = true;
 
             // Set the content background image and title
-            this.DOM.content.style.backgroundImage = this.DOM.items[this.pos].querySelector('.grid_item-inner').style.backgroundImage.replace(/img/g, 'imgs/large');
+            this.DOM.content.style.backgroundImage = this.DOM.items[this.pos].querySelector('.grid_item-inner').style.backgroundImage.replace(/imgs/g, 'imgs/large');
             this.DOM.contentTitle.innerHTML = this.title;
 
             // Scales down and fades out the mouse toggle
@@ -202,7 +202,7 @@
             this.animation = anime({
                 targets: this.DOM.items,
                 duration: 20,
-                easing: 'easeoutQuad',
+                easing: 'easeOutQuad',
                 opacity: 0,
                 delay: anime.stagger(70, {grid: this.gridDef, from: this.pos})
             });
@@ -237,7 +237,7 @@
             this.animation = anime({
                 targets: this.DOM.items,
                 duration: 20,
-                easing: 'easeoutQuad',
+                easing: 'easeOutQuad',
                 opacity: [0,1],
                 delay: anime.stagger(70, {grid: this.gridDef, from: this.pos, direction: 'reverse'})
             });
