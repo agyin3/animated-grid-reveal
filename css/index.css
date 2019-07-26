@@ -214,10 +214,6 @@ a:focus {
     background-size: cover;
 }
 
-.demo .grid_item-inner {
-    filter: grayscale(1);
-}
-
 .grid_item-inner::after {
     content: '';
     position: absolute;
@@ -225,12 +221,12 @@ a:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.87);
     transition: background 0.1s ease;
 }
 
 .grid_item-inner:hover::after {
-    background: rgba(0,0,0,0.77);
+    background: #eee;
+    opacity: 0.5;
 }
 
 @media screen and (min-width: 53em) {
